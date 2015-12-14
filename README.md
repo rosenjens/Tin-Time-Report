@@ -1,2 +1,2 @@
 # Tin-Time-Report
-Online time tracking
+Erlang server for online time tracking
