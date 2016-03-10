@@ -1,0 +1,33 @@
+<!-- 
+%%=======================
+%% login_post.yaws
+%%
+%% @version 0
+%%=======================
+-->
+<erl>
+
+-include("lm_session.hrl").
+
+kv(K,L) -> 
+    { value, {K, V}} = lists:keysearch(K,1,L),
+    V.
+
+out(A) ->
+    L = yaws_api:parse_post(A),
+    User = kv("uname", L),
+    Passwd = kv("passwd", L),
+    
+    case myapp:authenticate(User, Passwd) of
+            {ok, LUser} ->
+                S = #session{ user = User, 
+                              passwd=Passwd, 
+                              udata=[]},
+                Cookie = yaws_api:new_cookie_session(S,30*60),
+                [{redirect_local, "/inside.yaws"}
+                , yaws_api:setcookie("lm_sid", Cookie)];
+            false ->
+                 { html, f("Login Fails!", [])}
+        end.
+
+</erl> 

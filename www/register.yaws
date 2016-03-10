@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tin Time report | Register</title>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="regBox">
+        <div class="regContainer">
+            <h1 class="text-center">Sign up</h1>
+            <p>Sorry, at the moment it is not possible to register on the site. For more information or pre-beta access, please contact</p>
+            <div class="text-center">
+                <strong>Rosen</strong>
+                <small>&lt;dot&gt;</small>
+                <strong>Jens</strong>
+                <small>&lt;a&gt;</small>
+                <strong>gmail</strong>
+                <small>&lt;dot&gt;</small>
+                <strong>com</strong>
+             </div>
+            <p>or just send us a funny cat picture. More updates are comming soon.</p>
+            <div class="back-button text-center">
+                <a href="#" onclick="window.history.go(-1); return false;"><span class="fa fa-arrow-circle-left"></span></a>
+            </div>
+        </div>
+        </section>
+    </body>
+</html>

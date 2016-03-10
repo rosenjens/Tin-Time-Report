@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tin Time report</title>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <section id="loginBox">
+            <div class="loginContainer">
+                <erl> 
+        %%        method(Arg) ->
+        %%            Rec = Arg#arg.req, 
+        %%            Rec#http_request.method.
+        %%        
+                out(Arg) ->
+                    {html, "<h1 class='text-center'>Tin Time Report</h1>"}.
+        %%            {ehtml, f("Method: ~s" , [method(Arg)])}.
+                %% </erl>
+                
+                %%<erl> 
+                %%out(Arg) ->
+                %%Headers = Arg#arg.headers,
+                %%Cookie = Headers#headers.cookie,
+                %%Prefs = yaws_api:find_cookie_val("Prefs", Cookie), {html, Prefs}.
+                
+                </erl>
+        
+                <form action="/login_post.yaws" method="post" class="form-login">
+                    <div class="form-field">
+                        <label class="user fade" for="login-username"><span class="fa fa-user"></span></label>
+                        <input id="login-username" name="uname" class="from-input" placeholder="Username" type="text" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="passwd fade" for="login-passwd"><span class="fa fa-lock"></span></label>
+                        <input id="login-passwd" name="passwd" class="from-input" placeholder="Password" type="password" required>
+                    </div>
+                    <div class="form-button">
+                        <input type="submit" value="Logga in">
+                    </div>
+                </form>
+                <div class=loginFoot>
+                    <p class="text-center">Inte medlem? <a href="/register.yaws">Registrera dig <span class="fa fa-arrow-circle-right"></span></a></p>
+                </div> 
+            </div>
+        </section>
+</html>
